@@ -27,7 +27,7 @@ int main(void)
 
   thrust::transform(D_in.begin(), D_in.end(), D_out.begin(), Add());
 
-  thrust::device_vector<int> H_out = D_out;
+  thrust::host_vector<int> H_out = D_out;
 
   for (int i = 0; i < H_out.size(); i++)
   {

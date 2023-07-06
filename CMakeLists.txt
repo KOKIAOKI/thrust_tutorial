@@ -3,8 +3,11 @@ project(test)
 
 find_package(CUDA REQUIRED)
 
+# helo
 CUDA_ADD_EXECUTABLE(hello src/hello.cu)
+CUDA_ADD_EXECUTABLE(hello_async src/hello_async.cu)
 
+# thrust sync and nosync test
 CUDA_ADD_EXECUTABLE(sync src/sync.cu)
 
 if(CUDA_VERSION VERSION_GREATER "12.0")
@@ -12,3 +15,11 @@ if(CUDA_VERSION VERSION_GREATER "12.0")
 else()
     CUDA_ADD_EXECUTABLE(nosync src/oldver_nosync.cu)
 endif()
+
+# memcpy and memcpyasync test
+CUDA_ADD_EXECUTABLE(equal_copy src/equal_copy.cu)
+CUDA_ADD_EXECUTABLE(equal_copy2 src/equal_copy2.cu)
+CUDA_ADD_EXECUTABLE(equal_copy3 src/equal_copy3.cu)
+CUDA_ADD_EXECUTABLE(memcpyasync src/memcpyasync.cu)
+CUDA_ADD_EXECUTABLE(memcpyasync2 src/memcpyasync2.cu)
+CUDA_ADD_EXECUTABLE(memcpyasync3 src/memcpyasync3.cu)
