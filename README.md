@@ -57,7 +57,7 @@ $ ./hello
 ```
 
 ## Nsight Systems test
-[Documents (Qiita)]()
+[Documents (Qiita)](https://qiita.com/koki2022/private/b8df5bc8c0e5669eb0f4)
 
 ### Nsight Systems Download
 [Nsight Systems](https://developer.nvidia.com/gameworksdownload#?dn=nsight-systems)
