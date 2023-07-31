@@ -5,15 +5,16 @@ find_package(CUDA REQUIRED)
 
 # helo
 CUDA_ADD_EXECUTABLE(hello src/hello.cu)
-CUDA_ADD_EXECUTABLE(hello_async src/hello_async.cu)
 
 # thrust sync and nosync test
 CUDA_ADD_EXECUTABLE(sync src/sync.cu)
 
 if(CUDA_VERSION VERSION_GREATER "12.0")
     CUDA_ADD_EXECUTABLE(nosync src/nosync.cu)
+    CUDA_ADD_EXECUTABLE(hello_async src/hello_async.cu)
 else()
     CUDA_ADD_EXECUTABLE(nosync src/oldver_nosync.cu)
+    CUDA_ADD_EXECUTABLE(hello_async src/oldver_hello_async.cu)
 endif()
 
 # memcpy and memcpyasync test

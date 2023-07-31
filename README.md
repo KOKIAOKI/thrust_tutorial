@@ -15,7 +15,7 @@ Check it out with the command below.
 $ gcc --version
 ```
 
-If your gcc version is not 10, please install gcc 10.
+If you can't build this source code and gcc version is not 10, please install gcc 10.
 ```
 $ sudo apt-get update
 $ sudo apt install gcc-10
